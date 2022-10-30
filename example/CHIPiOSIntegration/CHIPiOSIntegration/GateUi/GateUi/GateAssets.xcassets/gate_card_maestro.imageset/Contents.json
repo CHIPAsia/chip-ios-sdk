@@ -1,0 +1,15 @@
+{
+  "images" : [
+    {
+      "filename" : "gate_card_maestro.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "preserves-vector-representation" : true
+  }
+}
