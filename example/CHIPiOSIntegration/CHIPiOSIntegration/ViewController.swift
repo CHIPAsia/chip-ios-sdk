@@ -65,8 +65,8 @@ class ViewController: UIViewController, GateSdkViewControllerDelegate {
       case .success(let purchase):
         DispatchQueue.main.async {
           GateUi.config.merchant = "CHIP Demo Merchant" // Enter your company name to display in Payment process
-          GateUi.config.successUrl = (purchase.success_redirect ?? "").isEmpty ? "https://success.com" : purchase.success_redirect!
-          GateUi.config.failUrl = (purchase.failure_redirect ?? "").isEmpty ? "https://failure.com" : purchase.failure_redirect!
+          GateUi.config.successUrl = purchase.success_redirect! // make sure you pass this on POST /purchases/ payload
+          GateUi.config.failUrl = purchase.failure_redirect! // make sure you pass this on POST /purchases/ payload
           let vc = GateUi.setup(
             purchase.checkout_url!,
             postUrl: purchase.direct_post_url,
