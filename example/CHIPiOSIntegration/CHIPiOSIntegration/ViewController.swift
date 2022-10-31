@@ -64,20 +64,8 @@ class ViewController: UIViewController, GateSdkViewControllerDelegate {
       switch result {
       case .success(let purchase):
         DispatchQueue.main.async {
-          GateUi.config.merchant = "CHIP Demo Merchant" // Enter your company name to display in Payment process
-          GateUi.config.successUrl = purchase.success_redirect! // make sure you pass this on POST /purchases/ payload
-          GateUi.config.failUrl = purchase.failure_redirect! // make sure you pass this on POST /purchases/ payload
-          let vc = GateUi.setup(
-            purchase.checkout_url!,
-            postUrl: purchase.direct_post_url,
-            methods: self.paymentMethods,
-            amount: purchase.purchase?.total,
-            currency: purchase.purchase?.currency
-          )
-          // class have to conform to GateSdkViewControllerDelegate protocol
-          GateUi.paymentDelegate = self
-          vc.modalPresentationStyle = UIModalPresentationStyle.fullScreen
-          self.present(vc, animated: true, completion: nil)
+          Payment()
+            .createPayment(self, purchase: purchase, paymentMethods: self.paymentMethods)
         }
       case .failure(_):
         print("error")
