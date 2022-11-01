@@ -9,5 +9,5 @@ You are required to set **Brand ID** and **Secret Key** from your Developer sect
 2. Copy the SDK to your project.
 
 ## Others
-Facebook: [Merchants & DEV Community](https://www.facebook.com/groups/3210496372558088)
-Blog: [CHIP Blogs](https://blog.chip-in.asia/)
+- Facebook: [Merchants & DEV Community](https://www.facebook.com/groups/3210496372558088)
+- Blog: [CHIP Blogs](https://blog.chip-in.asia/)
