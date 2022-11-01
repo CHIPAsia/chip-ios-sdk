@@ -2,7 +2,7 @@
 Our iOS Mobile SDK helps you integrate with CHIP payment into your iOS application. It redirects the application to payment page.
 
 ## Prerequisite
-You are required to set **Brand ID** and *8Secret Key** from your Developer section by logging in to your account.
+You are required to set **Brand ID** and **Secret Key** from your Developer section by logging in to your account.
 
 ## Installation
 1. Download [CHIP iOS SDK](https://github.com/CHIPAsia/chip-ios-sdk/releases).
